@@ -1,14 +1,11 @@
 import "./style.css";
 
-const base = import.meta.env.BASE_URL;
-const asset = (fileName) => `${base}${fileName}`;
-
 document.querySelector("#app").innerHTML = `
 <div class="page-bg" aria-hidden="true"></div>
 
 <header class="site-header">
   <a class="brand" href="#top" aria-label="PaperCrop home">
-    <img src="${asset("logo.png")}" alt="PaperCrop logo" />
+    <img src="/logo.png" alt="PaperCrop logo" />
     <span>PaperCrop</span>
   </a>
   <a class="btn btn-small" href="#pricing">Get the App</a>
@@ -36,7 +33,7 @@ document.querySelector("#app").innerHTML = `
 
     <div class="hero-visual" aria-label="PaperCrop preview">
       <div class="hero-image-shell">
-        <img src="${asset("1.png")}" alt="Cropped and enhanced document preview" />
+        <img src="/1.png" alt="Cropped and enhanced document preview" />
       </div>
       <div class="hero-chip chip-top">Auto edge detection</div>
       <div class="hero-chip chip-bottom">High-quality export</div>
@@ -54,8 +51,8 @@ document.querySelector("#app").innerHTML = `
         <h3>Smart crop and enhancement</h3>
         <p>Go from manual framing to cleaner, readable scans with one quick pass.</p>
         <div class="clip-compare" style="--clip-delay: 0s">
-          <img class="clip-base" src="${asset("2.png")}" alt="Document image before smart crop" />
-          <img class="clip-top" src="${asset("1.png")}" alt="Document image after smart crop and enhancement" />
+          <img class="clip-base" src="/2.png" alt="Document image before smart crop" />
+          <img class="clip-top" src="/1.png" alt="Document image after smart crop and enhancement" />
           <span class="clip-divider" aria-hidden="true"></span>
           <span class="label before">Before</span>
           <span class="label after">After</span>
@@ -66,8 +63,8 @@ document.querySelector("#app").innerHTML = `
         <h3>Drawing and markup to image</h3>
         <p>Upload rough concepts and get high-quality visuals ready to share.</p>
         <div class="clip-compare" style="--clip-delay: 1.1s">
-          <img class="clip-base" src="${asset("4.png")}" alt="Sketch markup image before generation" />
-          <img class="clip-top" src="${asset("3.png")}" alt="Generated high-quality landscape image" />
+          <img class="clip-base" src="/4.png" alt="Sketch markup image before generation" />
+          <img class="clip-top" src="/3.png" alt="Generated high-quality landscape image" />
           <span class="clip-divider" aria-hidden="true"></span>
           <span class="label before">Before</span>
           <span class="label after">After</span>
@@ -150,14 +147,14 @@ document.querySelector("#app").innerHTML = `
 <footer class="site-footer">
   <div>
     <a class="brand" href="#top" aria-label="PaperCrop home">
-      <img src="${asset("logo.png")}" alt="PaperCrop logo" />
+      <img src="/logo.png" alt="PaperCrop logo" />
       <span>PaperCrop</span>
     </a>
     <p>Scan smarter, create faster.</p>
   </div>
   <div class="footer-links">
-    <a href="${asset("privacy-policy.html")}">Privacy Policy</a>
-    <a href="${asset("terms-and-conditions.html")}">Terms and Conditions</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/terms-and-conditions.html">Terms and Conditions</a>
   </div>
   <p class="copyright">&copy; ${new Date().getFullYear()} PaperCrop. All rights reserved.</p>
 </footer>
